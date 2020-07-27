@@ -1,3 +1,4 @@
+import { PhotoDetailsModule } from './photo-details/photo-details.module';
 import { NgModule } from '@angular/core';
 import { PhotoModule } from './photo/photo.module';
 import { PhotoFormModule } from './photo-form/photo-form.module';
@@ -10,7 +11,8 @@ import { DarkenOnHoverModule } from '../shared/directives/darken-on-hover/darken
         PhotoModule,
         PhotoFormModule,
         PhotoListModule,
-        DarkenOnHoverModule
+        DarkenOnHoverModule,
+        PhotoDetailsModule
     ]
 })
 export class PhotosModule {}

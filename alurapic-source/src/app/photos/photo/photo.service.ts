@@ -35,7 +35,7 @@ export class PhotoService {
 
     }
 
-    findById(id: string) {
+    findById(id: number) {
         return this.http.get<Photo>(API + '/photos/' + id);
     }
 
@@ -49,5 +49,9 @@ export class PhotoService {
             API + '/photos/' + photoId + '/comments',
             { commentText }
         ) 
+    }
+
+    removePhoto(photoId: number) {
+        return this.http.delete(API + '/photos/' + photoId);
     }
 }

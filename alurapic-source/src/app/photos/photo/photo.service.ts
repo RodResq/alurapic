@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { map, catchError } from 'rxjs/operators';
 import { PhotoComment } from './photo-comment';
 import { HttpClient, HttpParams } from '@angular/common/http';
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 import { Photo } from "./photo";
 import { of, throwError } from 'rxjs';
 
-const API = 'http://localhost:3000';
+const API = environment.apiUrl;
 
 @Injectable({ providedIn: 'root' })
 export class PhotoService {
